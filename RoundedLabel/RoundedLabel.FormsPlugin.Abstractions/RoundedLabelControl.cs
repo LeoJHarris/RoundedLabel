@@ -8,21 +8,29 @@ namespace RoundedLabel.FormsPlugin.Abstractions
     /// </summary>
     public class RoundedLabelControl //: Control type
     {
-        //example of custom property
-        /// <summary>
-        /// Thickness property of border
-        /// </summary>
-        //public static readonly BindableProperty BorderThicknessProperty =
-        //  BindableProperty.Create<RoundedLabelImage, int>(
-        //    p => p.BorderThickness, 0);
+        public static readonly BindableProperty CurvedCornerRadiusProperty =
+      BindableProperty.Create(
+          nameof(CurvedCornerRadius),
+          typeof(double),
+          typeof(RoundedLabelControl),
+          12.0);
+        public double CurvedCornerRadius
+        {
+            get { return (double)GetValue(CurvedCornerRadiusProperty); }
+            set { SetValue(CurvedCornerRadiusProperty, value); }
+        }
 
-        /// <summary>
-        /// Border thickness of circle image
-        /// </summary>
-        //public int BorderThickness
-        //{
-        //  get { return (int)GetValue(BorderThicknessProperty); }
-        //  set { SetValue(BorderThicknessProperty, value); }
-        //}
+
+        public static readonly BindableProperty CurvedBackgroundColorProperty =
+            BindableProperty.Create(
+                nameof(CurvedBackgroundColor),
+                typeof(Color),
+                typeof(RoundedLabelControl),
+                Color.Default);
+        public Color CurvedBackgroundColor
+        {
+            get { return (Color)GetValue(CurvedBackgroundColorProperty); }
+            set { SetValue(CurvedBackgroundColorProperty, value); }
+        }
     }
 }
