@@ -25,6 +25,8 @@ namespace Sample.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            RoundedLabel.FormsPlugin.iOS.RoundedLabelRenderer.Init();
+
             return base.FinishedLaunching(app, options);
         }
     }

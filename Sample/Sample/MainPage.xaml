@@ -4,8 +4,6 @@
              xmlns:local="clr-namespace:Sample"
              x:Class="Sample.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ContentView HorizontalOptions="Center" VerticalOptions="Center" x:Name="RoundedLabelView"></ContentView>
 
 </ContentPage>

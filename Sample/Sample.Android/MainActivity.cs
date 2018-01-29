@@ -17,6 +17,8 @@ namespace Sample.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+            RoundedLabel.FormsPlugin.Android.RoundedLabelRenderer.Init();
+
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
