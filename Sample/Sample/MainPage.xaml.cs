@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using LeoJHarris.RoundedLabel.Plugin.Abstractions;
+using Xamarin.Forms;
 
 namespace Sample
 {
@@ -8,7 +9,7 @@ namespace Sample
         {
             InitializeComponent();
             
-            OnlyRoundedLabelView.Content = new RoundedLabel.FormsPlugin.Abstractions.RoundedLabel
+            OnlyRoundedLabelView.Content = new RoundedLabel
             {
                 TextColor = Color.White,
                 CurvedBackgroundColor = Color.Red,
@@ -18,13 +19,13 @@ namespace Sample
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 VerticalTextAlignment = TextAlignment.Center,
-                HeightRequest = 40,
+               // HeightRequest = 0,
                 FontSize = 15,
                 FontAttributes = FontAttributes.Bold
             }; ;
 
             RoundedLabelViewInsideCustomContentView.Content =
-                new RoundedLabel.FormsPlugin.Abstractions.PaddedRoundedLabel(new RoundedLabel.FormsPlugin.Abstractions.RoundedLabel
+                new PaddedRoundedLabel(new RoundedLabel
                 {
                     TextColor = Color.White,
                     CurvedBackgroundColor = Color.Black,

@@ -1,14 +1,13 @@
 using System;
 using Xamarin.Forms;
-using RoundedLabel.FormsPlugin.Android;
 using Xamarin.Forms.Platform.Android;
 using Android.Graphics.Drawables;
-using RoundedLabel.FormsPlugin.Abstractions;
 using Android.Content;
 using Android.Util;
+using LeoJHarris.RoundedLabel.Plugin.Abstractions;
 
-[assembly: ExportRenderer(typeof(RoundedLabel.FormsPlugin.Abstractions.RoundedLabel), typeof(RoundedLabelRenderer))]
-namespace RoundedLabel.FormsPlugin.Android
+[assembly: ExportRenderer(typeof(RoundedLabel), typeof(RoundedLabelRenderer))]
+namespace LeoJHarris.RoundedLabel.Plugin.Abstractions
 {
     /// <summary>
     /// RoundedLabel Renderer

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using LeoJHarris.RoundedLabel.Plugin.iOS;
 using UIKit;
 
 namespace Sample.iOS
@@ -25,7 +26,7 @@ namespace Sample.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
-            RoundedLabel.FormsPlugin.iOS.RoundedLabelRenderer.Init();
+            RoundedLabelRenderer.Init();
 
             return base.FinishedLaunching(app, options);
         }

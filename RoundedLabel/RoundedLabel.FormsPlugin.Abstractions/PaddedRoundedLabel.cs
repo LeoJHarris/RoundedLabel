@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace RoundedLabel.FormsPlugin.Abstractions
+namespace LeoJHarris.RoundedLabel.Plugin.Abstractions
 {
     public class PaddedRoundedLabel : ContentView
     {
