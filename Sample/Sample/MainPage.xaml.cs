@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using LeoJHarris.RoundedLabel.Plugin.Abstractions;
+using Xamarin.Forms;
 
 namespace Sample
 {
@@ -7,23 +8,18 @@ namespace Sample
         public MainPage()
         {
             InitializeComponent();
-
-            var relativeLayout = new RelativeLayout
-            {
-                HorizontalOptions = LayoutOptions.FillAndExpand
-            };
-
-            var roundedLabelView = new RoundedLabel.FormsPlugin.Abstractions.RoundedLabel
+            
+            OnlyRoundedLabelView.Content = new RoundedLabel
             {
                 TextColor = Color.White,
-                CurvedBackgroundColor = Color.Black,
+                CurvedBackgroundColor = Color.Red,
                 Text = "RoundedLabel",
                 RoundedCornerRadius = 20,
                 HorizontalTextAlignment = TextAlignment.Center,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 VerticalTextAlignment = TextAlignment.Center,
-                HeightRequest = 40,
+               // HeightRequest = 0,
                 FontSize = 15,
                 FontAttributes = FontAttributes.Bold
             };
@@ -42,8 +38,22 @@ namespace Sample
                          //,Constraint.RelativeToParent(layout => GetRoundedLabelHeight(layout) + 30)
                          );
             relativeLayout.Padding = new Thickness(80,0);
-           
-            RoundedLabelView.Content = relativeLayout;
+
+            RoundedLabelView.Content = relativeLayout();
+
+        RoundedLabelView.Content = new RoundedLabel
+                {
+                    TextColor = Color.White,
+                    CurvedBackgroundColor = Color.Black,
+                    Text = "RoundedLabel in custom ContentView",
+                    RoundedCornerRadius = 20,
+                    HorizontalTextAlignment = TextAlignment.Center,
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
+                    VerticalOptions = LayoutOptions.FillAndExpand,
+                    VerticalTextAlignment = TextAlignment.Center,
+                    FontSize = 15,
+                    FontAttributes = FontAttributes.Bold
+                };
         }
     }
 }
