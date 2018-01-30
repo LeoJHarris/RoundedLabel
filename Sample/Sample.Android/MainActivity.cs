@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using LeoJHarris.RoundedLabel.Plugin.Abstractions;
 
 namespace Sample.Droid
 {
@@ -17,7 +18,7 @@ namespace Sample.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-            RoundedLabel.FormsPlugin.Android.RoundedLabelRenderer.Init();
+            RoundedLabelRenderer.Init();
 
             base.OnCreate(bundle);
 

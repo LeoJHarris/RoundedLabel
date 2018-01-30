@@ -1,11 +1,11 @@
-﻿using RoundedLabel.FormsPlugin.Abstractions;
+﻿using LeoJHarris.RoundedLabel.Plugin.Abstractions;
+using LeoJHarris.RoundedLabel.Plugin.iOS;
 using System;
 using Xamarin.Forms;
-using RoundedLabel.FormsPlugin.iOS;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(RoundedLabel.FormsPlugin.Abstractions.RoundedLabel), typeof(RoundedLabelRenderer))]
-namespace RoundedLabel.FormsPlugin.iOS
+[assembly: ExportRenderer(typeof(RoundedLabel), typeof(RoundedLabelRenderer))]
+namespace LeoJHarris.RoundedLabel.Plugin.iOS
 {
     /// <summary>
     /// RoundedLabel Renderer
@@ -29,13 +29,12 @@ namespace RoundedLabel.FormsPlugin.iOS
 
             if (e.NewElement != null)
             {
-                Abstractions.RoundedLabel _xfViewReference = (Abstractions.RoundedLabel)Element;
+                Abstractions.RoundedLabel roundedLabel = (Abstractions.RoundedLabel)Element;
 
                 // Radius for the curves
-                Layer.CornerRadius = (float)_xfViewReference.RoundedCornerRadius;
-
-                // this.Layer.Bounds = new CGRect();
-                Layer.BackgroundColor = _xfViewReference.CurvedBackgroundColor.ToCGColor();
+                Layer.CornerRadius = (float)roundedLabel.RoundedCornerRadius;
+                
+                Layer.BackgroundColor = roundedLabel.CurvedBackgroundColor.ToCGColor();
             }
         }
     }

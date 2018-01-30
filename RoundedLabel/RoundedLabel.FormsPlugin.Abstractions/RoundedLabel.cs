@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace RoundedLabel.FormsPlugin.Abstractions
+namespace LeoJHarris.RoundedLabel.Plugin.Abstractions
 {
     /// <summary>
     /// RoundedLabel Interface
@@ -21,18 +21,13 @@ namespace RoundedLabel.FormsPlugin.Abstractions
             set { SetValue(RoundedCornerRadiusBindableProperty, value); }
         }
 
-        public RoundedLabel()
-        {
-
-        }
-
-
         public static readonly BindableProperty RoundedBackgroundColorBindableProperty =
             BindableProperty.Create(
                 nameof(CurvedBackgroundColor),
                 typeof(Color),
                 typeof(RoundedLabel),
                 Color.Default);
+
         public Color CurvedBackgroundColor
         {
             get { return (Color)GetValue(RoundedBackgroundColorBindableProperty); }

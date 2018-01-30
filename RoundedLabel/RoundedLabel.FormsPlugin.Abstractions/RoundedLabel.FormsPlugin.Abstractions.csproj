@@ -5,10 +5,12 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
     <Version>1.0.0.0</Version>
+    <AssemblyName>LeoJHarris.RoundedLabel.Plugin.Abstractions</AssemblyName>
+    <RootNamespace>LeoJHarris.RoundedLabel.Plugin.Abstractions</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.0\RoundedLabel.FormsPlugin.Abstractions.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard1.0\LeoJHarris.RoundedLabel.Plugin.Abstractions.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

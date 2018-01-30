@@ -15,9 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Android", "Sample\Sa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.iOS", "Sample\Sample.iOS\Sample.iOS.csproj", "{B22E3563-45CB-49C7-8CB9-6F3089F37DAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample\Sample.csproj", "{1A485B44-0E88-4C88-B76F-611D1AA247D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample", "Sample\Sample\Sample.csproj", "{1A485B44-0E88-4C88-B76F-611D1AA247D9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleProj", "SampleProj", "{9B9ADC41-1656-4A6A-BCF7-44B156F63FA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuspec", "Nuspec", "{094E7534-1CFA-4F91-A5D6-9CEBFAF3DE96}"
+	ProjectSection(SolutionItems) = preProject
+		plugin.nuspec = plugin.nuspec
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
